@@ -27,8 +27,11 @@ Route::middleware([
 
     Route::get('/', [EventController::class, 'index'])
         ->name('root');
-        
+
     Route::resource('events', EventController::class);
 
+    Route::get('calendar', function(){
+        return view('full-calendar');
+    })->name('calendar');
 });
 
