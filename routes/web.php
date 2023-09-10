@@ -35,5 +35,6 @@ Route::middleware([
         return view('full-calendar');
     })->name('calendar');
     Route::get('/calendar/action', [FullCalendarController::class, 'index']);
+    Route::post('/calendar/action', [FullCalendarController::class, 'action']);
 });
 
