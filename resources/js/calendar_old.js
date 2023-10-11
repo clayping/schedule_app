@@ -8,7 +8,6 @@ import momentPlugin from "@fullcalendar/moment";
 const calendarEl = document.getElementById("calendar");
 
 const calendar = new Calendar(calendarEl, {
-
     plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, momentPlugin],
     // ナビゲーション
     headerToolbar: {
@@ -23,7 +22,6 @@ const calendar = new Calendar(calendarEl, {
     // 日付表示の境界線時刻を設定(デフォルトは9時)
     nextDayThreshold: '00:00:00',
 
-    //カレンダーに表示させる予定のデータをルーティングを用いて取得
     events: '/calendar/action',
 
     // 予定がない部分をクリック
@@ -45,12 +43,7 @@ const calendar = new Calendar(calendarEl, {
     eventResize: function (event, delta) {
         alert('eventResizeのイベントです');
     },
-
-    //カレンダーの縦スクロールをなくす
-    height: "auto",
 });
-
-
 
 calendar.render();
 
@@ -219,4 +212,3 @@ deleteButton.addEventListener('click', function () {
             toggleModal();
         });
 });
-
