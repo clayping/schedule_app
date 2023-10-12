@@ -26,19 +26,18 @@
             </div>
             <div class="my-4 text-slate-500 text-lg leading-relaxed">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
-                    {{ __('使用目的') }}
+                    {{ __('Event Name') }}
                 </label>
-                <input type="text" name="title" id="title" placeholder="{{ __('使用目的') }}"
+                <input type="text" name="title" id="title" placeholder="{{ __('Event Name') }}"
                     value="{{ old('title') }}" required
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
             <div class="my-4 text-slate-500 text-lg leading-relaxed mb-2">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="body">
-                    {{ __('人数') }}
+                    {{ __('Description') }}
                 </label>
-                <input type="text" name="body" id="body" placeholder="{{ __('人数') }}"
-                    value="{{ old('body') }}" required
-                    class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                <textarea name="body" id="body" placeholder="{{ __('Description') }}"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline h-32">{{ old('body') }}</textarea>
             </div>
             <input type="submit" value="{{ __('Create') }}"
                 class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">

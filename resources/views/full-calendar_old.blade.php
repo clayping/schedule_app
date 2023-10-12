@@ -34,32 +34,11 @@
                             <input type="time" name="end_time" id="end_date"
                                 class="shadow appearance-none border rounded w-auto py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         </div>
-                        <div class="my-4 text-slate-500 text-lg leading-relaxed flex">
-                            <div class="w-1/3 pr-4">
-                                <label class="block text-gray-700 text-sm font-bold mb-2" for="reservation">
-                                    {{ __('予約者') }}
-                                </label>
-                                <input type="text" name="reservation" id="reservation" required placeholder="予約者"
-                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            </div>
-                            <div class="w-1/3">
-                                <label class="block text-gray-700 text-sm font-bold mb-2" for="location">
-                                    {{ __('場所') }}
-                                </label>
-                                {{-- <input type="text" name="location" id="location" required placeholder="場所"
-                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"> --}}
-                                <select name="location" id="location" required
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                                    <option value="会議室1">会議室1</option>
-                                    <option value="会議室2">会議室2</option>
-                                </select>
-                            </div>
-                        </div>
                         <div class="my-4 text-slate-500 text-lg leading-relaxed">
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
-                                {{ __('使用目的') }}
+                                {{ __('Event Name') }}
                             </label>
-                            <input type="text" name="title" id="title" required placeholder="使用目的"
+                            <input type="text" name="title" id="title" required placeholder="予定名"
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         </div>
                         <div class="my-4 text-slate-500 text-lg leading-relaxed mb-2">
@@ -67,7 +46,7 @@
                                 {{ __('Description') }}
                             </label>
                             <textarea name="body" id="body" placeholder="{{ __('Description') }}" required
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline h-32"></textarea>
                         </div>
                     </form>
                     <!--footer-->

@@ -8,7 +8,6 @@ import momentPlugin from "@fullcalendar/moment";
 const calendarEl = document.getElementById("calendar");
 
 const calendar = new Calendar(calendarEl, {
-
     plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, momentPlugin],
     // ナビゲーション
     headerToolbar: {
@@ -19,15 +18,10 @@ const calendar = new Calendar(calendarEl, {
     // 日本語化
     locales: jaLocale,
     locale: 'ja',
-    // 日表示を消す
-    dayCellContent: function(arg) {
-        return arg.date.getDate();
-    },
 
     // 日付表示の境界線時刻を設定(デフォルトは9時)
     nextDayThreshold: '00:00:00',
 
-    //カレンダーに表示させる予定のデータをルーティングを用いて取得
     events: '/calendar/action',
 
     // 予定がない部分をクリック
@@ -49,12 +43,7 @@ const calendar = new Calendar(calendarEl, {
     eventResize: function (event, delta) {
         alert('eventResizeのイベントです');
     },
-
-    //カレンダーの縦スクロールをなくす
-    height: "auto",
 });
-
-
 
 calendar.render();
 
@@ -72,7 +61,6 @@ const formStartDate = modalForm.querySelector('input[name="start_date"]');
 const formStartTime = modalForm.querySelector('input[name="start_time"]');
 const formEndDate = modalForm.querySelector('input[name="end_date"]');
 const formEndTime = modalForm.querySelector('input[name="end_time"]');
-const formLocation = modalForm.querySelector('select[name="location"]')
 const formTitle = modalForm.querySelector('input[name="title"]');
 const formBody = modalForm.querySelector('textarea[name="body"]');
 
@@ -168,7 +156,6 @@ addButton.addEventListener('click', function () {
     const data = {
         title: formTitle.value,
         body: formBody.value,
-        location: formLocation.value,
         start: isAllDay ? formStartDate.value : formStartDate.value + ' ' + formStartTime.value,
         end: isAllDay ? formEndDate.value : formEndDate.value + ' ' + formEndTime.value,
         type: 'add'
@@ -190,7 +177,6 @@ updateButton.addEventListener('click', function () {
         id: formId.value,
         title: formTitle.value,
         body: formBody.value,
-        location: formLocation.value,
         start: isAllDay ? formStartDate.value : formStartDate.value + ' ' + formStartTime.value,
         end: isAllDay ? formEndDate.value : formEndDate.value + ' ' + formEndTime.value,
         type: 'update'
@@ -226,4 +212,3 @@ deleteButton.addEventListener('click', function () {
             toggleModal();
         });
 });
-
