@@ -36,18 +36,23 @@
                         </div>
                         <div class="my-4 text-slate-500 text-lg leading-relaxed flex">
                             <div class="w-1/3 pr-4">
-                                <label class="block text-gray-700 text-sm font-bold mb-2" for="">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="reservation">
                                     {{ __('予約者') }}
                                 </label>
-                                <input type="text" name="" id="" required placeholder="予約者"
+                                <input type="text" name="reservation" id="reservation" required placeholder="予約者"
                                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                             </div>
                             <div class="w-1/3">
-                                <label class="block text-gray-700 text-sm font-bold mb-2" for="">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="location">
                                     {{ __('場所') }}
                                 </label>
-                                <input type="text" name="" id="" required placeholder="場所"
-                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                {{-- <input type="text" name="location" id="location" required placeholder="場所"
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"> --}}
+                                <select name="location" id="location" required
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    <option value="会議室1">会議室1</option>
+                                    <option value="会議室2">会議室2</option>
+                                </select>
                             </div>
                         </div>
                         <div class="my-4 text-slate-500 text-lg leading-relaxed">
